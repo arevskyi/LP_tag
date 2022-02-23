@@ -72,21 +72,23 @@
   identities: lpTag.identities || [],
   ev: lpTag.ev || [],
 }, lpTag.init()) : window.lpTag._tagCount += 1;
+</script>
 <!-- END LivePerson Monitor. -->
 
-
+<script
+  type='text/javascript'>
 window.lpTag='window.lpTag' || {};
 lpTag.sdes='lpTag.sdes||[];' ;
-  
- var print =lpTag.sdes.get("personal");
+
+var print =lpTag.sdes.get("personal");
 console.log('next page ',print);
-  
+
 var data = {
   "type":"personal",
-   "personal":{  
+  "personal":{
     "firstname":"firstName2",
-     "lastname":"lastName2"
-   }
+    "lastname":"lastName2"
+  }
 }
 
 var fun = function() {};
