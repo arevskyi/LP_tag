@@ -5,7 +5,7 @@
   <title>test LP teg</title>
 </head>
 <body>
-<a href='index.html'> main page</a>>
+<a href='index.html'> main page</a>
 
 
 <!-- BEGIN LivePerson Monitor. -->
@@ -71,31 +71,27 @@
   hooks: lpTag.hooks || [],
   identities: lpTag.identities || [],
   ev: lpTag.ev || [],
-}, lpTag.init()) : window.lpTag._tagCount += 1;</script>
+}, lpTag.init()) : window.lpTag._tagCount += 1;
 <!-- END LivePerson Monitor. -->
 
-<script type='text/javascript'
+
 window.lpTag='window.lpTag' || {};
 lpTag.sdes='lpTag.sdes||[];' ;
+  
+ var print =lpTag.sdes.get("personal");
+console.log('next page ',print);
+  
 var data = {
-  "type":"prodView",
-  "products": [{"product": {
-    "name": "Women's Running Shoes", //PRODUCT NAME
-    "category": "shoes", //PRODUCT CATEGORY NAME
-    "sku": "10305020", //PRODUCT SKU OR UNIQUE IDENTIFIER
-    "price": 119.95 //PRODUCT PRICE
-    }
-  }]
-};
+  "type":"personal",
+   "personal":{  
+    "firstname":"firstName2",
+     "lastname":"lastName2"
+   }
+}
 
 var fun = function() {};
 lpTag.sdes.send(data, fun);
-</script>
-<script type='text/javascript'
-        window.lpTag='window.lpTag' || {};
-        lpTag.sdes='lpTag.sdes||[];' ;
-var print =lpTag.sdes.get("prodView");
-console.log(print)
+
 </script>
 
 
